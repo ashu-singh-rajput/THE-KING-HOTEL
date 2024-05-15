@@ -1,0 +1,130 @@
+/* css reset */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+    --Text-font-family:"Playfair Display", serif;
+}
+/* Navigation Bar logo */
+#logo{
+ display: flex;
+  justify-content: center;
+  /* background-color: black;
+  position: relative;
+  z-index: -1;
+  opacity: 0.4; */
+}
+#logo img{
+ 
+    height:55px ;
+    margin: 4px 12px;
+}
+
+/* Navigation bar */
+#navbar::before{
+    content: "";
+    background-color:white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+ 
+}
+
+/* Navigation Bar: List styling */
+#navbar ul{
+    display: flex;
+  
+
+    
+}
+#navbar ul li{
+   list-style: none;
+  font-size: 1.3rem;
+
+} 
+ #navbar ul li a{
+    font-family: var(--Text-font-family);
+    color: black;
+   display: block;
+   padding: 11px 30px;
+   text-decoration: none;
+   cursor: pointer;
+} 
+ #navbar ul li a:hover{
+    background-color: white;
+    color: black;
+} 
+/* imageSlider start */
+#navbar+div{
+ position: relative;
+ top: 70px;
+}
+
+.First_Section{
+    
+    width: 100%;
+    height: 100vh;
+    
+    display: grid;
+    box-sizing:border-box;
+   
+}
+.imageSlider{
+    width: 90%;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("../IMAGE/imagerestro/view1.jpg");
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px white;
+    animation: slider 40s infinite linear;
+
+}
+@keyframes slider{
+    0%{ 
+        background-image:url("../IMAGE/imagerestro/view1.jpg"); 
+    }
+    16%{
+        background-image: url("../IMAGE/imagerestro/view2.jpg");
+    }
+    32%{ 
+        background-image: url("../IMAGE/imagerestro/view3.jpg");
+    }
+    48%{ background-image: url("../IMAGE/imagerestro/view4.jpg");
+    }
+    64%{
+        background-image: url("../IMAGE/imagerestro/view5.jpg");
+    }
+    80%{
+        background-image: url("../IMAGE/imagerestro/view6.jpg");
+    }
+    96%{
+        background-image: url("../IMAGE/imagerestro/view7.jpg");
+
+    }
+    100%{
+        background-image: url("../IMAGE/imagerestro/view1.jpg");
+
+    }
+}
+
+.Textarea{
+    
+
+}
